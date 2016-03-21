@@ -1,0 +1,102 @@
+From 22158d260d633792311622ff83b66c405565e573 Mon Sep 17 00:00:00 2001
+From: Arpan Chavda <arpanchavdaeng@gmail.com>
+Date: Mon, 21 Mar 2016 23:18:13 +0530
+Subject: [PATCH] Intial commit of terminix-0.54.0
+
+---
+ Makefile         |  1 +
+ component.xml    |  3 +++
+ package.yml      | 15 +++++++++++++++
+ pspec_x86_64.xml | 39 +++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 58 insertions(+)
+ create mode 100644 Makefile
+ create mode 100644 component.xml
+ create mode 100644 package.yml
+ create mode 100644 pspec_x86_64.xml
+
+diff --git a/Makefile b/Makefile
+new file mode 100644
+index 0000000..0a42375
+--- /dev/null
++++ b/Makefile
+@@ -0,0 +1 @@
++include ../Makefile.common
+diff --git a/component.xml b/component.xml
+new file mode 100644
+index 0000000..9a8af4c
+--- /dev/null
++++ b/component.xml
+@@ -0,0 +1,3 @@
++<PISI>
++    <Name>system.utils</Name>
++</PISI>
+diff --git a/package.yml b/package.yml
+new file mode 100644
+index 0000000..5aa724d
+--- /dev/null
++++ b/package.yml
+@@ -0,0 +1,15 @@
++name       : terminix
++version    : 0.54.0
++release    : 25
++source     :
++    - https://github.com/gnunn1/terminix/releases/download/0.54.0/terminix.zip : d00c5c7eaac86a48d4cc08b9ac6453efc0ed67361f61129a0e5f5330e3bb57a9
++license    : MPL-2.0
++summary    : A tiling terminal emulator for Linux using GTK+ 3
++description: |
++    A tiling terminal emulator for Linux using GTK+ 3
++builddeps  :
++setup      : |
++build      : |
++install    : |
++    mkdir -p %installroot%/usr/
++    mv * %installroot%/usr/
+diff --git a/pspec_x86_64.xml b/pspec_x86_64.xml
+new file mode 100644
+index 0000000..92d473c
+--- /dev/null
++++ b/pspec_x86_64.xml
+@@ -0,0 +1,39 @@
++<PISI>
++    <Source>
++        <Name>terminix</Name>
++        <Packager>
++            <Name>Arpan Chavda</Name>
++            <Email>arpanchavdaeng@gmail.com</Email>
++        </Packager>
++        <License>MPL-2.0</License>
++        <Summary xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3</Summary>
++        <Description xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3
++</Description>
++        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
++    </Source>
++    <Package>
++        <Name>terminix</Name>
++        <Summary xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3</Summary>
++        <Description xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3
++</Description>
++        <PartOf>system.utils</PartOf>
++        <Files>
++            <Path fileType="executable">/usr/bin</Path>
++            <Path fileType="localedata">/usr/share/locale</Path>
++            <Path fileType="data">/usr/share/applications</Path>
++            <Path fileType="data">/usr/share/dbus-1</Path>
++            <Path fileType="data">/usr/share/glib-2.0</Path>
++            <Path fileType="data">/usr/share/terminix</Path>
++            <Path fileType="data">/usr/share/nautilus-python</Path>
++        </Files>
++    </Package>
++    <History>
++        <Update release="25">
++            <Date>2016-03-21</Date>
++            <Version>0.54.0</Version>
++            <Comment>Packaging update</Comment>
++            <Name>Arpan Chavda</Name>
++            <Email>arpanchavdaeng@gmail.com</Email>
++        </Update>
++    </History>
++</PISI>
+\ No newline at end of file
+-- 
+2.7.3
+

@@ -1,0 +1,39 @@
+<PISI>
+    <Source>
+        <Name>terminix</Name>
+        <Packager>
+            <Name>Arpan Chavda</Name>
+            <Email>arpanchavdaeng@gmail.com</Email>
+        </Packager>
+        <License>MPL-2.0</License>
+        <Summary xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3</Summary>
+        <Description xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>terminix</Name>
+        <Summary xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3</Summary>
+        <Description xml:lang="en">A tiling terminal emulator for Linux using GTK+ 3
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/bin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="data">/usr/share/applications</Path>
+            <Path fileType="data">/usr/share/dbus-1</Path>
+            <Path fileType="data">/usr/share/glib-2.0</Path>
+            <Path fileType="data">/usr/share/terminix</Path>
+            <Path fileType="data">/usr/share/nautilus-python</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="25">
+            <Date>2016-03-21</Date>
+            <Version>0.54.0</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Arpan Chavda</Name>
+            <Email>arpanchavdaeng@gmail.com</Email>
+        </Update>
+    </History>
+</PISI>

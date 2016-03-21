@@ -1,0 +1,15 @@
+name       : terminix
+version    : 0.54.0
+release    : 25
+source     :
+    - https://github.com/gnunn1/terminix/releases/download/0.54.0/terminix.zip : d00c5c7eaac86a48d4cc08b9ac6453efc0ed67361f61129a0e5f5330e3bb57a9
+license    : MPL-2.0
+summary    : A tiling terminal emulator for Linux using GTK+ 3
+description: |
+    A tiling terminal emulator for Linux using GTK+ 3
+builddeps  :
+setup      : |
+build      : |
+install    : |
+    mkdir -p %installroot%/usr/
+    mv * %installroot%/usr/
